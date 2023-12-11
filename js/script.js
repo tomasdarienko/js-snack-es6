@@ -49,3 +49,55 @@ console.log(risultato)
 
 
 
+
+
+const squadre =
+     [
+          {
+               nome: 'inter',
+               punti:0,
+               falli_subiti:0
+          },
+          {
+               nome: 'juventus',
+               punti:0,
+               falli_subiti:0
+          },
+          {
+               nome: 'milan',
+               punti:0,
+               falli_subiti:0
+          },
+          {
+               nome: 'napoli',
+               punti:0,
+               falli_subiti:0
+          },
+          {
+               nome: 'sassuolo',
+               punti:0,
+               falli_subiti:0
+          },
+     ]
+
+
+     function n_random(){
+        return  Math.floor((Math.random() * 50) + 1)
+     }
+
+     squadre.forEach((element) => {
+          element.punti=n_random()
+          element.falli_subiti=n_random()
+     });
+
+     // console.log(squadre)
+
+     let nomi_falli=[ ]
+
+
+     squadre.forEach((elem)=>{
+          let { nome, falli_subiti } = elem;
+          nomi_falli.push({nome, falli_subiti});
+     })
+
+     console.log(nomi_falli)
